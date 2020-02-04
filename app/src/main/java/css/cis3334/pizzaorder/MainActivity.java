@@ -55,6 +55,31 @@ public class MainActivity extends AppCompatActivity implements updateViewInterfa
         // ****** For the Assignment, students need to add code here to get information from the UI widgets...
 
         String orderDescription = "No orders yet";
+        String pizzaSize = "No Size Determined";
+        String cheeseSelection = "with Cheese, ";
+        String eatWhere = "to Eat in or carryout. ";
+
+        // Determine Pizza size
+        if(rbSmall.isChecked()){
+            pizzaSize = "Small ";
+        }else if(rbMedium.isChecked()){
+            pizzaSize = "Medium ";
+        }else if(rbLarge.isChecked()){
+            pizzaSize = "Large ";
+        }else{ pizzaSize = "Something went wrong with Size";}
+
+        // Determine extra cheese
+        if(chkbxCheese.isChecked()){
+            cheeseSelection = "with EXTRA Cheese, ";
+        }else{cheeseSelection = "with Cheese, ";}
+
+        //Determine Delivery or Eat in or Carryout
+        if(chkbxDelivery.isChecked()){
+            eatWhere = "for Delivery. ";
+        }else{eatWhere = "to Eat in or carryout. ";}
+
+        orderDescription = pizzaSize + spinnerToppings.getSelectedItem().toString() + ", " + cheeseSelection + eatWhere;
+
 
         // ****** For the Practice Activity, students need to call to OrderPizza here
         // ****** For the Assignment, students will modify the order to fit the type of pizza the user selects using the UI widgets
