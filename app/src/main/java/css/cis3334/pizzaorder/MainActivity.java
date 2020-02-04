@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements updateViewInterfa
         chkbxCheese = (CheckBox) findViewById(R.id.checkBoxCheese);
         chkbxDelivery = (CheckBox) findViewById(R.id.checkBoxDeluvery);
 
+//**** There were no commented lines, but I added this line - W. Dixon ****
         // Set up the TextViews
         txtTotal = (TextView) findViewById(R.id.textViewTotal);
         txtStatus = (TextView) findViewById(R.id.textViewStatus);
